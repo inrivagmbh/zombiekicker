@@ -8,8 +8,21 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.1'
-
 gem 'sprockets-rails', '~> 2.1.4'
+
+# Auth
+gem 'devise'
+gem 'omniauth'
+
+# gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+# Gemfile in Rails >= 4.0
+gem 'activeadmin', github: 'activeadmin'
+
+
+#mailcatcher
+gem 'mailcatcher'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
