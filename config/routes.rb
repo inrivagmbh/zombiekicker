@@ -1,18 +1,35 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :scores
 
   root :to => 'start#index'
 
   devise_for :users
+=======
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  resources :scores
+
+  devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "omniauth_callbacks", :passwords => "passwords" }
+
+  root :to => 'start#index'
+>>>>>>> omniauth
 
   resources :users
 
   resources :teams do
+<<<<<<< HEAD
     member do
       get 'register_user'
     end
   end
 
+=======
+         member do
+           get 'register_user'
+         end
+  end
+>>>>>>> omniauth
   resources :matches
 
   # The priority is based upon order of creation: first created -> highest priority.

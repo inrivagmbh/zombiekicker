@@ -8,9 +8,28 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.1'
+<<<<<<< HEAD
 
 gem 'sprockets-rails', '~> 2.1.4'
 
+=======
+gem 'sprockets-rails', '~> 2.1.4'
+
+
+
+# Auth
+gem 'devise'
+gem 'omniauth'
+# gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+# Gemfile in Rails >= 4.0
+gem 'activeadmin', github: 'activeadmin'
+
+
+#mailcatcher
+gem 'mailcatcher'
+>>>>>>> omniauth
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -30,6 +49,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> omniauth
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -40,6 +63,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+<<<<<<< HEAD
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # authentication
@@ -47,3 +71,6 @@ gem 'devise'
 
 # mailcatcher
 gem 'mailcatcher'
+=======
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+>>>>>>> omniauth

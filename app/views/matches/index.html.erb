@@ -2,6 +2,7 @@
 
 <table>
   <thead>
+<<<<<<< HEAD
   <tr>
     <th>Teams</th>
     <th>Result</th>
@@ -17,12 +18,31 @@
         <td><%= match.team_1.name %> vs. <%= match.team_2.name %></td>
         <td><%= match.goals_team_1.to_s %> vs. <%= match.goals_team_2.to_s %></td>
         <td><%= match.start_time %></td>
+=======
+    <tr>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Duration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.start_time %></td>
+        <td><%= match.end_time %></td>
+>>>>>>> omniauth
         <td><%= match.duration %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
         <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+<<<<<<< HEAD
   <% end %>
+=======
+    <% end %>
+>>>>>>> omniauth
   </tbody>
 </table>
 

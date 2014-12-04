@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> omniauth
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,6 +14,7 @@
   <%= @team.avatar_url %>
 </p>
 
+<<<<<<< HEAD
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
 
@@ -19,4 +24,20 @@
 <% end %>
 
 <%= link_to 'Beitreten', register_user_team_path(@team), {:class => 'btn btn-default'} %>
+=======
+<p>
+
+  <%= link_to 'Edit', edit_team_path(@team) %> |
+  <%= link_to 'Back', teams_path %>
+
+  <strong>Teammitglieder</strong>
+  <% @team.users.each do |user| %>
+      <%= render 'users/list', user:user %>
+<% end %>
+
+  <%= link_to 'Beitreten', register_user_team_path(@team), {:class => 'btn btn-primary'} %>
+
+
+</p>
+>>>>>>> omniauth
 

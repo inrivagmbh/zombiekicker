@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   start_time: 2014-11-20 15:26:17
   end_time: 2014-11-20 15:26:17
   duration: 1.5
@@ -8,4 +9,13 @@ one:
 two:
   start_time: 2014-11-20 15:26:17
   end_time: 2014-11-20 15:26:17
+=======
+  start_time: 2014-11-20 15:26:20
+  end_time: 2014-11-20 15:26:20
+  duration: 1.5
+
+two:
+  start_time: 2014-11-20 15:26:20
+  end_time: 2014-11-20 15:26:20
+>>>>>>> omniauth
   duration: 1.5

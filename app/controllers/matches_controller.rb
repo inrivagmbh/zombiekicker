@@ -16,8 +16,11 @@ class MatchesController < ApplicationController
   # GET /matches/new
   def new
     @match = Match.new
+<<<<<<< HEAD
     @team1 = Team.find_or_create(params[:team1].values.reject(&:blank?)) if params[:team1]
     @team2 = Team.find_or_create(params[:team2].values.reject(&:blank?)) if params[:team2]
+=======
+>>>>>>> omniauth
   end
 
   # GET /matches/1/edit

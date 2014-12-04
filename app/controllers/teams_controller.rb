@@ -20,6 +20,10 @@ class TeamsController < ApplicationController
 
   # GET /teams/1/edit
   def edit
+<<<<<<< HEAD
+=======
+
+>>>>>>> omniauth
   end
 
   # POST /teams
@@ -45,7 +49,10 @@ class TeamsController < ApplicationController
       if @team.update(team_params)
         format.html { redirect_to @team, notice: 'Team was successfully updated.' }
         format.json { render :show, status: :ok, location: @team }
+<<<<<<< HEAD
         format.xml {}
+=======
+>>>>>>> omniauth
       else
         format.html { render :edit }
         format.json { render json: @team.errors, status: :unprocessable_entity }
@@ -68,7 +75,11 @@ class TeamsController < ApplicationController
     user = current_user
     team.register(user)
     respond_to do |format|
+<<<<<<< HEAD
       format.html { redirect_to team, notice: 'Sie sind dem Team beigetreten. Yay.' }
+=======
+      format.html { redirect_to team, notice: 'Sie sind dem Team erfolgreich beigetretten' }
+>>>>>>> omniauth
       format.json { head :no_content }
     end
   end
@@ -83,4 +94,8 @@ class TeamsController < ApplicationController
     def team_params
       params.require(:team).permit(:name, :avatar_url)
     end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> omniauth

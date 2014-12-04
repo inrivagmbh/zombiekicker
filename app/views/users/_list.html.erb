@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 <div class="col-md-3">
   <h3><%= link_to user.email, user %></h3>
   <%= image_tag user.avatar_url, {:class => 'img-thumbnail img-responsive'} %><br/>
   <%= link_to 'View', user %><br/>
   <%= link_to 'Edit', edit_user_path(user) %><br/>
   <%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Bist du sicher?' } %>
+=======
+<div class="col-md-3">
+  <h2><%= link_to user.email, user %></h2>
+  <%= image_tag user.avatar_url, {:class=> 'img-thumbnail img-responsive'} %><br/>
+  <%= link_to 'Show', user %><br/>
+  <%= link_to 'Edit', edit_user_path(user) %><br/>
+  <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+>>>>>>> omniauth
 </div>
