@@ -1,27 +1,22 @@
 Rails.application.routes.draw do
 
-  resources :scores
-
   root :to => 'start#index'
 
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  resources :scores
-
   devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "omniauth_callbacks", :passwords => "passwords" }
 
-  root :to => 'start#index'
+  ActiveAdmin.routes(self)
 
-  resources :users
-
+  resources :matches
+  resources :scores
   resources :teams do
     member do
       get 'register_user'
     end
   end
+  resources :users
 
-  resources :matches
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
