@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Avatar url:</strong>
+  <%= @team.avatar_url %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
+
+
+<% @team.users.each do |user| %>
+    <%= render 'users/list', user:user %>
+<% end %>
+
+<%= link_to 'Beitreten', register_user_team_path(@team), {:class => 'btn btn-default'} %>
+

@@ -1,0 +1,17 @@
+<h1>ZombieKicker Teams</h1>
+
+<div class="row">
+    <% @teams.each do |team| %>
+        <div class="col-md-3">
+          <h2><%= link_to team.name, team %></h2>
+          <%= image_tag team.avatar_url, {:class => 'img-thumbnail img-responsive'} %><br/>
+          <%= link_to 'View', team %><br/>
+          <%= link_to 'Edit', edit_team_path(team) %><br/>
+          <%= link_to 'Löschen', team, method: :delete, data: { confirm: 'Bist du sicher?' } %>
+        </div>
+    <% end %>
+</div>
+
+
+
+<%= link_to 'New Team', new_team_path %>
