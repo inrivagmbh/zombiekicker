@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20141204164724) do
-=======
+
 ActiveRecord::Schema.define(version: 20141204172652) do
 
   create_table "active_admin_comments", force: true do |t|
@@ -48,7 +46,7 @@ ActiveRecord::Schema.define(version: 20141204172652) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
->>>>>>> omniauth
+
 
   create_table "matches", force: true do |t|
     t.datetime "start_time"
@@ -56,13 +54,10 @@ ActiveRecord::Schema.define(version: 20141204172652) do
     t.float    "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
     t.integer  "team1_id"
     t.integer  "team2_id"
     t.integer  "goals_team_1"
     t.integer  "goals_team_2"
-=======
->>>>>>> omniauth
   end
 
   create_table "matches_teams", force: true do |t|
@@ -109,11 +104,8 @@ ActiveRecord::Schema.define(version: 20141204172652) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "avatar_url"
-<<<<<<< HEAD
-=======
     t.string   "provider"
     t.string   "uid"
->>>>>>> omniauth
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
