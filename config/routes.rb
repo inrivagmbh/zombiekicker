@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   root :to => 'start#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-  devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "omniauth_callbacks", :passwords => "passwords" }
-
+  devise_for :users, :controllers => {  :omniauth_callbacks => "omniauth_callbacks", :passwords => "passwords" }
   ActiveAdmin.routes(self)
 
   resources :matches
