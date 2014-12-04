@@ -47,3 +47,6 @@ gem 'devise'
 
 # mailcatcher
 gem 'mailcatcher'
+
+# twitter
+gem 'twitter'

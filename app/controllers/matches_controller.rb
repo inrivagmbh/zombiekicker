@@ -28,7 +28,7 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
-
+    client.update(@match.team_1.name + ' spielte ' + @match.goals_team1 + ':' + @match.goals_team_2 + ' gegen ' + @match.team_2.name + 'auf zombiekicker.');
     respond_to do |format|
       if @match.save
         format.html { redirect_to @match, notice: 'Match was successfully created.' }
@@ -72,6 +72,6 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:start_time, :end_time, :duration)
+      params.require(:match).permit(:start_time, :end_time, :duration, :team1_id, :team2_id, :goals_team_1, :goals_team_2)
     end
 end
