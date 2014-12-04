@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root :to => 'start#index'
 
-  devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "omniauth_callbacks", :passwords => "passwords" }
 
