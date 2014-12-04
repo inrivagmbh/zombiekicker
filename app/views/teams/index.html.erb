@@ -1,0 +1,19 @@
+<h1>Listing teams</h1>
+
+
+
+  <div class="row">
+  <% @teams.each do |team| %>
+        <div class="col-md-3">
+        <h2><%= link_to team.name, team_path(team) %></h2>
+        <%= image_tag team.avatar_url, {:class=> 'img-thumbnail img-responsive'} %><br/>
+        <%= link_to 'Show', team %><br/>
+        <%= link_to 'Edit', edit_team_path(team) %><br/>
+        <%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+</div>
+  <% end %>
+    </div>
+
+<br>
+
+<%= link_to 'New Team', new_team_path %>

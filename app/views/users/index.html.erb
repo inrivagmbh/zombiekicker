@@ -1,0 +1,10 @@
+<h1>Zombiekicker</h1>
+
+<div class="row">
+  <% @users.each do |user| %>
+      <%= render 'users/list', user:user %>
+  <% end %>
+</div>
+
+
+
