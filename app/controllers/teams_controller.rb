@@ -20,6 +20,8 @@ class TeamsController < ApplicationController
 
   # GET /teams/1/edit
   def edit
+
+
   end
 
   # POST /teams
@@ -45,6 +47,7 @@ class TeamsController < ApplicationController
       if @team.update(team_params)
         format.html { redirect_to @team, notice: 'Team was successfully updated.' }
         format.json { render :show, status: :ok, location: @team }
+
         format.xml {}
       else
         format.html { render :edit }
@@ -84,3 +87,6 @@ class TeamsController < ApplicationController
       params.require(:team).permit(:name, :avatar_url)
     end
 end
+
+end
+

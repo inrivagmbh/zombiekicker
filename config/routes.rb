@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+
   resources :scores
 
   root :to => 'start#index'
 
   devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  resources :scores
+
+  devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "omniauth_callbacks", :passwords => "passwords" }
+
+  root :to => 'start#index'
 
   resources :users
 

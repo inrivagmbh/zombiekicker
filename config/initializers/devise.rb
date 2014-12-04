@@ -6,6 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   config.secret_key = 'e91f0452b2604a64d37b9296492a94379c82b37a303c5a9d20d1fbe9a8504d1a23fa6605b67991415cde63bb2b9f75fac827bf8f99e656a00f3643d3ca3d9203'
 
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -97,7 +98,8 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'c3de7b09c83a127d0f0c053b1314cf3a5bb0377eeca6b8938483931442561a3215091e5d63462089d9b230a0ae61e99f9c93f02c12f34ed4f50b653f0a7625b6'
+  config.pepper = 'c3de7b09c83a127d0f0c053b1314cf3a5bb0377eeca6b8938483931442561a3215091e5d63462089d9b230a0ae61e99f9c93f02c12f34ed4f50b653f0a7625b6'
+
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -144,8 +146,9 @@ Devise.setup do |config|
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
-  # to give user feedback and not to assert the e-mail validity.
+
   config.email_regexp = /\A[^@]+@[^@]+\z/
+
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
